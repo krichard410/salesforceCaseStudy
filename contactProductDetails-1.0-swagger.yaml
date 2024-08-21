@@ -1,0 +1,108 @@
+openapi: 3.0.2
+info:
+  version: '1.0'
+  title: Contact Product Details
+  description: Manage Product Details
+
+paths: 
+  /contactProductDetails/{uuid}:
+    get: 
+      operationId: getContactProductDetails
+      summary: get product details related to a contact
+      tags: [ ' Contact Product Details ']
+      parameters: 
+        - $ref: '#/components/parameters/uuid'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ContactProductDetailsResponse'
+        '404':
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NotFoundError'
+        '400':
+          description: Invalid Request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InvalidRequestError'
+        
+components:
+  parameters:
+    uuid:
+      in: path
+      name: uuid
+      description: uuid for the contact
+      schema:
+        type: string
+      required: true
+
+  schemas:
+    ContactProductDetailsResponse:
+      type: object
+      properties:
+        homeCountry:
+          type: string
+          description: Home Country related to the Contact
+        productName:
+          type: string
+          description: Product Name related to the Contact
+        atmFee:
+          type: string
+          description: ATM Fee in Home Country Currency for Product
+        cardReplacementCost:
+          type: string
+          description: Card Replacement Cost in Home Country Currency for Product
+        costPerCalendarMonth:
+          type: string
+          description: Cost of Product per Calendar Month in Home Country Currency
+    
+    NotFoundError:
+      type: object
+      properties:
+        status:
+          type: string
+          example: 404
+        errors:
+          type: array
+          items:
+            properties:
+              code:
+                type: string
+                example: 404
+              title:
+                type: string
+                example: No Product Details were Found
+              description:
+                type: string
+                example: Contact UUID could not find Product Details. Contact must have a Product and a Home Country.
+    
+    InvalidRequestError:
+      type: object
+      properties:
+        status:
+          type: string
+          example: 400
+        errors:
+          type: array
+          items:
+            properties:
+              code:
+                type: string
+                example: 400
+              title:
+                type: string
+                example: UUID Parameter was invalid or empty
+              description:
+                type: string
+                example: Contact UUID was invalid
+
+servers:
+  # Added by API Auto Mocking Plugin
+  - description: SwaggerHub API Auto Mocking
+    url: https://virtserver.swaggerhub.com/KIRSTENRICHARD/contactProductDetails/1.0
