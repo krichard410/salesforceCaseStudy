@@ -1,0 +1,13 @@
+<template>
+    <lightning-card title="Contact's Product Details" icon-name="standard:your_account">
+      <div class="slds-m-around_medium">
+        <template lwc:if={productDetailInfo}>
+            <p>Product: {productDetailInfo.N26_Product__r.Name}</p>
+            <p>Home Country: {productDetailInfo.Country__c}</p>
+            <p>Card Replacement Cost: {productDetailInfo.Card_Replacement_Cost__c}</p>
+            <p>Cost per Calendar Month: {productDetailInfo.Cost_per_Calendar_Month__c}</p>
+            <p>ATM Fee in Other Currencies: {productDetailInfo.ATM_Fee_in_other_currencies__c}</p>
+        </template>
+      </div>
+    </lightning-card>
+</template>
