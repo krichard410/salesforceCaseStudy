@@ -56,7 +56,7 @@ Below I've created a diagram of the data model that shows the new objects (and s
 
  ### Future Enhancements
  Some things I would love to improve on this solution would be:
- - Changing the title of the LWC card component to dynamically display the Contact's Name so it's made clearer for the Case agent
+ - Changing the title of the LWC card component to dynamically display the Contact's Name so it's made clearer for the Case agent (for example - "Tommy's Product Details")
  - Adding in some editing features for the LWC, to edit the field values on the go
 
 ## Question 2 - API
@@ -71,12 +71,13 @@ Below I've created a diagram of the data model that shows the new objects (and s
  For Question 2, the files associated with this solution are listed below:
 
  Note: I've built out a utility class to hold any functions that might be used in future enhancements of this solution. There is also one test class that covers each of the 3 Apex classes.
- There is also a folder called '' that holds a .yaml file for the API specifications I built out.
+ There is also a folder called 'api-documentation' that holds a .yaml file for the API specifications I built out.
  
  <img width="839" alt="Screenshot 2024-08-22 at 3 08 36 PM" src="https://github.com/user-attachments/assets/1cb87d1d-1c7f-4d37-a199-da13f2666926">
 
  ### Limitations
  Some limitations with this API solution are:
+ - It doesn't check the length of the UUID passed in through the path. Even though the UUID field on the Contact record has a max length (to adhere to UUID principles), the UUID that is sent in is not checked for the validity of the UUID itself (it checks for a matching UUID in Salesforce). 
 
  ### Future Enhancements
  With this API solution, some future enhancements that would be fun to build are:
