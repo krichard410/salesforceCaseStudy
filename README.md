@@ -26,7 +26,7 @@ While reading the case study, I made a few assumptions on how the Salesforce sol
 
 ## Future Enhancements for my Case Study Solution
 To improve my case study solution in the future, some things I'd love to add are:
-- A way to prevent duplicate Product detail records from being created
+- A way to prevent duplicate Product detail records from being created (only one Product and one Country pairing allowed)
 - A way to ensure that the currency data in the ATM Fees, Card Replacement Costs, and Cost per Calendar Month match the country they are tied to (for example - if the Country is FR, I want to make sure any data in the 3 fields are using Euros)
 - Perhaps making the Global Value set that holds all the countries a little nicer for a user to read (for example - 'DE' as a value would show 'Germany' as a label)
 
