@@ -10,9 +10,18 @@ While reading the case study, I made a few assumptions on how the Salesforce sol
 - Assuming that Product detail records will not have any duplicates (product to country)
 - For modifying existing or adding products & product details, users can do this through modifying the records directly (list views or related lists) or utilizing a data loading tool
 
-### Screenshots from the new Salesforce App
-
-<img width="1508" alt="Screenshot 2024-08-22 at 3 17 22 PM" src="https://github.com/user-attachments/assets/314ada1a-8ad5-410b-ba1e-eadb4c76ba9f">
+### Screenshots from the new N26 Salesforce App
+<details>
+ <summary>Open this section to view</summary>
+ Below is an example Contact record with the Product, Home Country, and UUID fields populated:
+ <img width="1341" alt="Screenshot 2024-08-22 at 3 37 15 PM" src="https://github.com/user-attachments/assets/7122d16b-1d57-4c1b-8b80-5e81dff4b1e5">
+ 
+ Below is the Product object list view that displays the 3 product records:
+ <img width="1500" alt="Screenshot 2024-08-22 at 3 38 16 PM" src="https://github.com/user-attachments/assets/c03b340a-3094-4351-8f1b-1735a4fe48bb">
+ 
+ Below is an example of the Product Details list view that displays all the various records for each Product <> Country combination:
+ <img width="1501" alt="Screenshot 2024-08-22 at 3 35 38 PM" src="https://github.com/user-attachments/assets/18bc0992-70e8-4e69-a782-2d69c9bd23d4">
+</details>
 
 ## Future Enhancements for this Case Study
 To improve this case study solution in the future, some things I'd love to add are:
