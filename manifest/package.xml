@@ -1,36 +1,46 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
-        <members>*</members>
+        <members>ContactProductDetailsController</members>
+        <members>ContactProductDetailsControllerTest</members>
+        <members>ContactProductDetailsResponseWrapper</members>
+        <members>ContactProductDetailsUtil</members>
+        <members>ContactProductDetailsWebService</members>
+        <members>ContactProductDetailsWebServiceTest</members>
         <name>ApexClass</name>
     </types>
     <types>
         <members>*</members>
-        <name>ApexComponent</name>
+        <name>CustomApplication</name>
+    </types>
+    <types>
+        <members>Contact</members>
+        <members>N26_Product__c</members>
+        <members>N26_Product_Detail__c</members>
+        <name>CustomObject</name>
     </types>
     <types>
         <members>*</members>
-        <name>ApexPage</name>
+        <name>Flexipage</name>
     </types>
     <types>
         <members>*</members>
-        <name>ApexTestSuite</name>
+        <name>GlobalValueSet</name>
     </types>
     <types>
-        <members>*</members>
-        <name>ApexTrigger</name>
+        <members>Case-Case Layout</members>
+        <members>Contact-Contact Layout</members>
+        <members>N26_Product__c-N26 Product Layout</members>
+        <members>N26_Product_Detail__c-N26 Product Detail Layout</members>
+        <name>Layout</name>
     </types>
     <types>
-        <members>*</members>
-        <name>AuraDefinitionBundle</name>
-    </types>
-    <types>
-        <members>*</members>
+        <members>displayContactProductDetails</members>
         <name>LightningComponentBundle</name>
     </types>
-    <types>
-        <members>*</members>
-        <name>StaticResource</name>
+     <types>
+        <members>Admin</members>
+        <name>Profile</name>
     </types>
     <version>61.0</version>
 </Package>
