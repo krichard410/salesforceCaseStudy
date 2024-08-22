@@ -72,9 +72,6 @@ components:
           type: array
           items:
             properties:
-              code:
-                type: string
-                example: 404
               title:
                 type: string
                 example: No Product Details were Found
@@ -92,9 +89,6 @@ components:
           type: array
           items:
             properties:
-              code:
-                type: string
-                example: 400
               title:
                 type: string
                 example: UUID Parameter was invalid or empty

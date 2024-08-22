@@ -1,0 +1,7 @@
+.cardContainer {
+    /* Remove extra spacing at the top/bottom of the lightning card */
+    --slds-c-card-header-spacing-block-end: 0px;
+    --slds-c-card-header-spacing-block-start: 0px;
+    --slds-c-card-body-spacing-block-start: 0px;
+    --slds-c-card-body-spacing-block-end: 0px;
+  }

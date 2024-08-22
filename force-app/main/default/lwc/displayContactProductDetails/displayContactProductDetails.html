@@ -1,13 +1,53 @@
 <template>
-    <lightning-card title="Contact's Product Details" icon-name="standard:your_account">
-      <div class="slds-m-around_medium">
-        <template lwc:if={productDetailInfo}>
-            <p>Product: {productDetailInfo.N26_Product__r.Name}</p>
-            <p>Home Country: {productDetailInfo.Country__c}</p>
-            <p>Card Replacement Cost: {productDetailInfo.Card_Replacement_Cost__c}</p>
-            <p>Cost per Calendar Month: {productDetailInfo.Cost_per_Calendar_Month__c}</p>
-            <p>ATM Fee in Other Currencies: {productDetailInfo.ATM_Fee_in_other_currencies__c}</p>
-        </template>
+  <!-- Display Card with Product Details if there is Data, if not, hide the Card completely -->
+  <template lwc:if={productDetailInfo}>
+    <lightning-card class="cardContainer">
+      <div class="slds-page-header">
+        <div class="slds-page-header__row">
+          <div class="slds-page-header__col-title">
+            <div class="slds-media">
+              <div class="slds-media__figure">
+                <lightning-icon icon-name="standard:your_account" alternative-text="Product Icon" title="Product Icon">
+                </lightning-icon>
+              </div>
+              <div class="slds-media__body">
+                <div class="slds-page-header__name">
+                  <div class="slds-page-header__name-title">
+                    <h1>
+                      <span class="slds-page-header__title slds-truncate" title="Contact's Product Details">Contact's
+                        Product Details</span>
+                    </h1>
+                  </div>
+                </div>
+                <p class="slds-page-header__name-meta slds-text-body_regular">Product:
+                  {productDetailInfo.N26_Product__r.Name} • Home Country: {productDetailInfo.Country__c}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="c-container">
+        <lightning-layout>
+          <lightning-layout-item padding="around-small">
+            <div class="header-column">
+              <p class="field-title" title="Card Replacement Cost"><b>Card Replacement Cost</b></p>
+              <p>{productDetailInfo.Card_Replacement_Cost__c}</p>
+            </div>
+          </lightning-layout-item>
+          <lightning-layout-item padding="around-small">
+            <div class="header-column">
+              <p class="field-title" title="Cost per Calendar Month"><b>Cost per Calendar Month</b></p>
+              <p>{productDetailInfo.Cost_per_Calendar_Month__c}</p>
+            </div>
+          </lightning-layout-item>
+          <lightning-layout-item padding="around-small">
+            <div class="header-column">
+              <p class="field-title" title="ATM Fee in Other Currencies"><b>ATM Fee in Other Currencies</b></p>
+              <p>{productDetailInfo.ATM_Fee_in_other_currencies__c}</p>
+            </div>
+          </lightning-layout-item>
+        </lightning-layout>
       </div>
     </lightning-card>
+  </template>
 </template>

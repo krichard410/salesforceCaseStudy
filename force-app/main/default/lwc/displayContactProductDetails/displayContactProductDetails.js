@@ -1,4 +1,4 @@
-import { LightningElement, api, wire, track } from 'lwc';
+import { LightningElement, api, wire } from 'lwc';
 import getProductDetails from '@salesforce/apex/ContactProductDetailsController.getProductDetails';
 
 export default class DisplayContactProductDetails extends LightningElement {
@@ -11,13 +11,9 @@ export default class DisplayContactProductDetails extends LightningElement {
         if(data) {
             this.productDetailInfo = data;
             this.error = undefined;
-            console.log('HEY');
-            console.log(data);
         } else if(error) {
             this.error = error;
             this.productDetailInfo = undefined;
-            console.log('HEY 2');
-            console.log(error);
         }
     }
 }
