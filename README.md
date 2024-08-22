@@ -72,4 +72,5 @@ Below I've created a diagram of the data model that shows the new objects (and s
  ### Future Enhancements
  With this API solution, some future enhancements that would be fun to build are:
 - POST, PATCH, DELETE HTTP functions within this Apex Web Service
+- Additional error response handling, for example - 500 server errors
 
