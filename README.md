@@ -13,6 +13,7 @@ While reading the case study, I made a few assumptions on how the Salesforce sol
 ### Screenshots from the new N26 Salesforce App
 <details>
  <summary>Open this section to view</summary>
+ 
  Below is an example Contact record with the Product, Home Country, and UUID fields populated:
  <img width="1341" alt="Screenshot 2024-08-22 at 3 37 15 PM" src="https://github.com/user-attachments/assets/7122d16b-1d57-4c1b-8b80-5e81dff4b1e5">
  
