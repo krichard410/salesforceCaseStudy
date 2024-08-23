@@ -10,7 +10,11 @@
         <name>ApexClass</name>
     </types>
     <types>
-        <members>*</members>
+        <members>n26logo</members>
+        <name>ContentAsset</name>
+    </types>
+    <types>
+        <members>N26_App</members>
         <name>CustomApplication</name>
     </types>
     <types>
@@ -20,11 +24,20 @@
         <name>CustomObject</name>
     </types>
     <types>
-        <members>*</members>
+        <members>N26_Product__c</members>
+        <members>N26_Product_Detail__c</members>
+        <name>CustomTab</name>
+    </types>
+    <types>
+        <members>Case_Record_Page</members>
+        <members>Contact_Record_Page</members>
+        <members>N26_App_UtilityBar</members>
+        <members>N26_Product_Detail_Record_Page</members>
+        <members>N26_Product_Record_Page</members>
         <name>Flexipage</name>
     </types>
     <types>
-        <members>*</members>
+        <members>Countries</members>
         <name>GlobalValueSet</name>
     </types>
     <types>

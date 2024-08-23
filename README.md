@@ -2,9 +2,12 @@
 
 Hello! Thanks for taking the time to view my solutions for the Salesforce Case Study :) 
 
+## Installing the Package
+This package can be deployed into a Salesforce Org (preferably a new environment), and the N26 App will be available for use. If the package is deployed in an already existing environment, there could be some deployment issues with the admin profile (potentially :)).
+
 ## Assumptions for this Case Study
 While reading the case study, I made a few assumptions on how the Salesforce solution would come together:
-- A contact can only have one Product (lookup) and one Home Country (Picklist)
+- A contact can only have one Product (lookup) and one Home Country (picklist)
 - A product detail is a child to the Product (parent), if a Product is deleted, all Product details should be deleted as well.
 - I've made the ATM Fees, Card Replacement Costs, and Cost per Calendar Month as text fields, as they seem to hold various types of data (currency, percentages, strings)
 - Assuming that Product detail records will not have any duplicates (product to country)
@@ -29,6 +32,7 @@ To improve my case study solution in the future, some things I'd love to add are
 - A way to prevent duplicate Product detail records from being created (only one Product and one Country pairing allowed)
 - A way to ensure that the currency data in the ATM Fees, Card Replacement Costs, and Cost per Calendar Month match the country they are tied to (for example - if the Country is FR, I want to make sure any data in the 3 fields are using Euros)
 - Perhaps making the Global Value set that holds all the countries a little nicer for a user to read (for example - 'DE' as a value would show 'Germany' as a label)
+- Making the Country field required on the N26 Product Detail object, seeing how this country field is tied to the solution below, it might make sense to make it required on a field-level
 
 ## Diagrams
 
@@ -39,7 +43,7 @@ Below I've created a diagram of the data model that shows the new objects (and s
 
 ## Question 1 - LWC
  ### Solution Breakdown
- For the first question, I decided to utilize an LWC to build out a display component to show the related Contact's product details (as I prefer LWC's). This LWC grabs the related Contact record to the Case (if one is related), and grabs the Home Country and Product fields on the Contact record to find the associated Product Details record. What is displayed to the user is the Product Name, the Home Country, and the 3 fields related to that product. Like below:
+ For the first question, I decided to utilize an LWC to build out a display component to show the related Contact's product details. This LWC grabs the related Contact record to the Case (if one is related), and grabs the Home Country and Product fields on the Contact record to find the associated Product Details record. What is displayed to the user is the Product Name, the Home Country, and the 3 fields related to that product. Like below:
 
  Note: If no contact is related to the Case, then the card will completely disappear from the right pane, nothing will be shown to the case agent.
  I have also made the related Apex class 'without sharing' so that any case agent will not have to add this Apex class to their security setup.
@@ -59,6 +63,7 @@ Below I've created a diagram of the data model that shows the new objects (and s
  Some things I would love to improve on this solution would be:
  - Changing the title of the LWC card component to dynamically display the Contact's Name so it's made clearer for the Case agent (for example - "Tommy's Product Details")
  - Adding in some editing features for the LWC, to edit the field values on the go
+ - Depending on the use case, an error screen might be useful for a case agent (for example - showing 'This client does not use any Product')
 
 ## Question 2 - API
  ### Solution Breakdown
