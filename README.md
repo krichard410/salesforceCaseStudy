@@ -4,9 +4,9 @@ Hello! Thanks for taking the time to view my solutions for the Salesforce Case S
 
 ## Assumptions for this Case Study
 While reading the case study, I made a few assumptions on how the Salesforce solution would come together:
-- A contact can only have one Product (lookup) and one Home Country (lookup)
+- A contact can only have one Product (lookup) and one Home Country (Picklist)
 - A product detail is a child to the Product (parent), if a Product is deleted, all Product details should be deleted as well.
-- I've made the ATM Fees, Card Replacement Costs, and Cost per Calendar Month as text fields, as they seem to hold different types of data
+- I've made the ATM Fees, Card Replacement Costs, and Cost per Calendar Month as text fields, as they seem to hold various types of data (currency, percentages, strings)
 - Assuming that Product detail records will not have any duplicates (product to country)
 - For modifying existing or adding products & product details, users can do this through modifying the records directly (list views or related lists) or utilizing a data loading tool
 
